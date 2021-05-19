@@ -53,6 +53,7 @@ public class SuperCalc {
         "i - Solve integrals\n" +
         "rs - Solve Reimann Sums\n" +
         "d - Calculate Derivative\n" +
+        "help - Show this menu\n" +
         "q - Quit\n" + "\nChoose an option:");
         
     }
@@ -107,18 +108,15 @@ public class SuperCalc {
                 System.out.println("Input equation you want to use, with x as variable followed by lower bound, upper bound, and number of iterations");
                 System.out.println("ex: 2*x 1 3 4");
                 func = SuperCalc.getNext();
-                System.out.println(func);
                 lowerBound = SuperCalc.getNextDouble();
-                System.out.println(lowerBound);
                 upperBound = SuperCalc.getNextDouble();
-                System.out.println(upperBound);
                 iterations = SuperCalc.getNextInt();
-                System.out.println(iterations);
                 ReimannSumm integral = new ReimannSumm(func, lowerBound, upperBound, iterations);
                 System.out.println("Left endpoint: "+integral.leftSum());
                 System.out.println("Right endpoint: "+integral.rightSum());
                 System.out.println("Trapezoid rule: "+integral.trapezoidSum());
                 //TODO fix accuracy of simpson sum
+                //TODO add midpoint rule
                 System.out.println("Simpson rule: "+integral.simpsonSum());
                 
                 usrInput = SuperCalc.getNextLine();
@@ -135,6 +133,10 @@ public class SuperCalc {
                 break;
             case "q":
                 quitMenu = true;
+                break;
+            case "help":
+                printMenuOptions();
+                usrInput = SuperCalc.getNextLine();
                 break;
             default:
                 System.out.println("Choose an valid option:");
