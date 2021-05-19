@@ -118,6 +118,7 @@ public class SuperCalc {
                 System.out.println("Left endpoint: "+integral.leftSum());
                 System.out.println("Right endpoint: "+integral.rightSum());
                 System.out.println("Trapezoid rule: "+integral.trapezoidSum());
+                //TODO fix accuracy of simpson sum
                 System.out.println("Simpson rule: "+integral.simpsonSum());
                 
                 usrInput = SuperCalc.getNextLine();

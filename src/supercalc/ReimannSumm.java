@@ -77,7 +77,7 @@ public class ReimannSumm {
          return myVal;
     }
     
-    public double simpsonSum() {
+    public double simpsonSum() { //TODO fix accuracy
         //simpson sum
         
          double rectWidth = (UPBOUND - LOWBOUND) / RECTCOUNT;
