@@ -44,7 +44,8 @@ public class SuperCalc {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        printMenu();
+        TestGUI.main(args);
+        //printMenu();
     }
     public static void printMenuOptions() {
       
